@@ -52,7 +52,7 @@ export const App = () => {
   const [sortField, setSortField] = useState<SortField | null>(null);
   const [reversed, setReversed] = useState(false);
   const visibleGoods = getPreparedGoods(goodsFromServer, sortField, reversed);
-  const isActive = (field: SortField) => field !== sortField;
+  const isActive = (field: SortField) => field === sortField;
 
   function handleReset() {
     setSortField(null);
